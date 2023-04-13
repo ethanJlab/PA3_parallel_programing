@@ -137,8 +137,12 @@ void get10MinAvg(){
 int main() {
     // this will be used to tell how much time has past since the start of the simulation
     //start with 3 hrs = 180 minutes
+    int totalMinutes = 181;
+    cout << "Enter the number of minutes you want to run the simulation: ";
+    cin >> totalMinutes;
+
     int minutes = 0;
-    while(minutes < 181)
+    while(minutes < totalMinutes)
     {
         // every minute each thread will get a new temp reading
         thread t1(doTask,1);
